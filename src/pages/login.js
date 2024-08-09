@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { useAuth } from '../useAuth';
 import { useRouter } from 'next/router';
-import "@/styles/login.module.css"
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');

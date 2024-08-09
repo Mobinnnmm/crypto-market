@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useAuth } from '../useAuth';
 import { useRouter } from 'next/router';
 import emailjs from '@emailjs/browser';
-import "@/styles/login.module.css";
 
 const RegisterPage = () => {
   const [email, setEmail] = useState('');
