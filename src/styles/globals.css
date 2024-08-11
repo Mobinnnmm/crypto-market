@@ -30,6 +30,72 @@
   width: 100%;
 }
 
+
+
+/* login page */
+ 
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   height: 50vh; 
+
+}
+
+.login-box {
+  background-color: #b0c5b7;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+} 
+
 /* main table */
 
 .crypto-list-page {
@@ -113,6 +179,7 @@
 
 
 
+
 .navbar {
   width: 100%;
   background-color: #080a0a;
@@ -136,55 +203,56 @@
   background-color: #ccd7d3;
 }
 
-/*
- search component
-*/
-.search-container {
+
+
+
+/* Search button  */
+
+.search-container{
   background: #fff;
   height: 30px;
   border-radius: 30px;
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: 0.8s;
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-              inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
-              inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+  /*box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  inset -7px -7px 10px 0px rgba(0,0,0,.1),
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+ text-shadow:  0px 0px 6px rgba(255,255,255,.3),
+            -4px -4px 6px rgba(116, 125, 136, .2);
+text-shadow: 2px 2px 3px rgba(255,255,255,0.5);*/
+box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+            -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
 
-.search-container:hover > .search-input {
+.search-container:hover > .search-input{
   width: 400px;
 }
 
-.search-container .search-input {
+.search-container .search-input{
   background: transparent;
   border: none;
-  outline: none;
+  outline:none;
   width: 0px;
   font-weight: 500;
   font-size: 16px;
   transition: 0.8s;
-  margin-right: 10px; /* Add margin between input and button */
+
 }
 
-.search-container .search-btn {
+.search-container .search-btn .fas{
   color: #5cbdbb;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0; /* Remove padding to keep button small */
-  margin-left: auto; /* Push the button to the right */
-  transition: all 0.3s ease;
 }
 
-.search-container .search-btn:hover {
-  background-color: #5cbdbb;
-  color: white;
-  border-radius: 50%;
-  transform: scale(1.1);
+
+.search-container:hover{
+animation: hoverShake 0.15s linear 3;
 }
 
 
@@ -291,33 +359,4 @@ input {
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
-}
-
-
-/* Pagination */
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.pagination button {
-  margin: 0 10px;
-  padding: 5px 10px;
-  background-color: #0070f3;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.pagination button[disabled] {
-  opacity: 0;
-}
-
-.pagination span {
-  margin: 0 10px;
-  line-height: 30px;
 }
