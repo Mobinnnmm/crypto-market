@@ -32,10 +32,11 @@ const Layout = ({ children }) => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
             
-              <Nav.Link as={Link} href="/AllCoins">All Coins</Nav.Link>
-              <Nav.Link as={Link} href="/about">About</Nav.Link>
+              {/* <Nav.Link as={Link} href="/about">About</Nav.Link> */}
               {authStatus ? (
                 <>
+                              <Nav.Link as={Link} href="/AllCoins">All Coins</Nav.Link>
+
                   <Nav.Link href="#" onClick={(e) => { e.preventDefault(); logout(); alert('you are signed out') }}>Sign out</Nav.Link>
                 </>
               ) : (

@@ -96,7 +96,7 @@ const CryptoList = () => {
       <table className="crypto-table">
         <thead>
           <tr>
-            {user ? <th>Favourite</th> : <th></th>}
+             <th>Favourite</th>
             <th>#</th>
             <th>Logo</th>
             <th>Name</th>
@@ -113,7 +113,7 @@ const CryptoList = () => {
           {currentCryptos.map((crypto, index) => (
             <tr key={crypto.id}>
               <td>
-                {user && (
+                {favorites && (
                   favorites.some(favorite => favorite.id === crypto.id) ? (
                     <FontAwesomeIcon
                       icon={solidStar}
@@ -152,11 +152,11 @@ const CryptoList = () => {
       </table>
 
       <div className="pagination">
-        <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
+        <button className='pagination-btn' onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
           Previous
         </button>
-        <span>Page {currentPage} of {totalPages}</span>
-        <button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage === totalPages}>
+        <span className='spn'>Page {currentPage} of {totalPages}</span>
+        <button className='pagination-btn' onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage === totalPages}>
           Next
         </button>
       </div>

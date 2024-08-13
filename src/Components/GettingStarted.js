@@ -1,40 +1,137 @@
-import Search from "./search";
+// import { useRouter } from "next/router";
+// import CryptoList from "./cryptoList";
+
+// export default function GettingStarted() {
+//   const router = useRouter();
+  
+//   return (
+//     <>
+
+// <h1 style={{ marginTop: '100px'}}>Crypto Market</h1>
+//         <h2>Navigate the Crypto Universe</h2>
+
+//       <img 
+//         src="/main-page.jpeg" 
+//         alt="Custom 500 Error Page" 
+//         style={{
+//           borderRadius: '5%',
+//           marginBottom: '20px',
+//           marginTop: '100px',
+//           width: '100%',
+//           height: '50vh'
+//         }} 
+//       />
+//               <button 
+//           onClick={() => {
+//             const element = document.getElementById("crypto-market");
+//             if (element) {
+//               element.scrollIntoView({ behavior: "smooth" });
+//             }
+//           }}
+//           style={{
+//             marginTop: '20px',
+//             padding: '10px 20px',
+//             backgroundColor: '#4CAF50',
+//             color: 'white',
+//             border: 'none',
+//             borderRadius: '5px',
+//             cursor: 'pointer'
+//           }}
+//         >
+//            View all Coins
+//         </button>
+//       <div 
+//         style={{
+//           width: '100%',
+//           display: 'flex',
+//           flexDirection: 'column',
+//           alignItems: 'center',
+//           justifyContent: 'center',
+//           height: '250vh',
+//           padding: '20px',
+//           borderRadius: '10%',
+//           boxShadow: '0px 0px 10px rgba(0,0,0,0.2)',
+//           fontFamily: 'Poppins',
+//           textAlign: 'center'
+//         }} 
+//       >
+//         <hr id="crypto-market" style={{ width: '100%' }} />
+
+//         <div>  
+//           <CryptoList />
+//           </div>
+
+
+//       </div>
+//     </>
+//   );
+// }
+
+
 import { useRouter } from "next/router";
+import CryptoList from "./cryptoList";
 
 export default function GettingStarted() {
   const router = useRouter();
+  
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      height: '100vh',
-      // backgroundColor: 'black',
-      padding: '20px',
-      borderRadius: '5%',
-      boxShadow: '0px 0px 10px rgba(0,0,0,0.2)',
-      fontFamily: 'Poppins',
-      textAlign: 'center'
-    }} >
-      <h1>Crypto Market</h1>
+    <>
+      <h1 style={{ marginTop: '100px'}}>Crypto Market</h1>
       <h2>Navigate the Crypto Universe</h2>
 
-      <hr style={{ width: '100%' }} />
+      <img 
+        src="/main-page.jpeg" 
+        alt="Custom 500 Error Page" 
+        style={{
+          borderRadius: '5%',
+          marginBottom: '20px',
+          marginTop: '100px',
+          width: '100%',
+          height: '50vh'
+        }} 
+      />
 
-      <img src="/main-page.jpeg" alt="Custom 500 Error Page" style={{
-        width: '80%',
-        height: 'auto',
-        borderRadius: '5%',
-        marginBottom: '20px'
-      }} />
+      <button 
+        onClick={() => {
+          const element = document.getElementById("crypto-market");
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+        style={{
+          marginTop: '20px',
+          padding: '10px 20px',
+          backgroundColor: '#4CAF50',
+          color: 'white',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer'
+        }}
+      >
+        View all Coins
+      </button>
 
-      <Search />
+      <div 
+        style={{
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '250vh',
+          padding: '20px',
+          borderRadius: '10%',
+          boxShadow: '0px 0px 10px rgba(0,0,0,0.2)',
+          fontFamily: 'Poppins',
+          textAlign: 'center'
+        }} 
+      >
+        <hr id="crypto-market" style={{ width: '100%' }} />
 
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px', width: "30%" }}>
-        <button onClick={() => router.push("/login")} style={{ marginRight: '50px' }} className="loginButton">Login</button>
-        <button onClick={() => router.push("/signup")} className="loginButton">Signup</button>
+        <div >  
+          <CryptoList />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
