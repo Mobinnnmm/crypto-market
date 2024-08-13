@@ -26,7 +26,7 @@ export default async function handler(req, res) {
       },
       params: {
         start: '1',
-        limit: '100',
+        limit: '250',
         convert: 'USD',
       },
     });
